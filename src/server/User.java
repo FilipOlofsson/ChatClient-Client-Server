@@ -58,7 +58,7 @@ public class User implements Runnable {
         }
         if(split[0].equals("groupSend")) {
             for(User user : current.Users) {
-                if(user.id == this.id)
+                if(user.id != this.id)
                     user.send(name + ": " + split[1]);
                 else
                     user.send(split[1]);
